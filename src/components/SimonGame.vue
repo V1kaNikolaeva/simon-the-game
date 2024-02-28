@@ -52,8 +52,6 @@ export default {
         { id: 4, sound: new Audio(require("../sounds/sounds_4.mp3")) },
       ],
 
-      audioPlay: null,
-
       currentClickPanel: 0,
       currentUserClicks: [],
       panelsId: [1, 2, 3, 4],
@@ -159,7 +157,7 @@ export default {
         audio.sound.currentTime = 0;
         audio.sound.play();
         this.lightOn(audio.id, time)
-        this.audioPlay = setTimeout(() => {
+        setTimeout(() => {
           this.playAudio(currentGame.slice(1), time);
         }, time);
       } else {
