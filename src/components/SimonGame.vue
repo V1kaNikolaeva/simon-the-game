@@ -91,15 +91,12 @@ export default {
         switch (this.currentMode) {
           case "easy":
             this.easyMode();
-            this.audioPlay.clearTimeout()
             break;
           case "normal":
             this.normalMode();
-            this.audioPlay.clearTimeout()
             break;
           case "hard":
             this.hardMode();
-            this.audioPlay.clearTimeout()
             break;
         }
       } else {
